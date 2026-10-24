@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PaisaPilot - Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>💰 PaisaPilot</h1>
+    <p>Your Personal Expense Tracker</p>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <div class="card">
+        <h3>Total Balance</h3>
+        <p id="balance">₹0.00</p>
+      </div>
+      <div class="card">
+        <h3>Total Income</h3>
+        <p id="income">₹0.00</p>
+      </div>
+      <div class="card">
+        <h3>Total Expenses</h3>
+        <p id="expenses">₹0.00</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Add a Transaction</h2>
+      <form id="expense-form">
+        <label for="name">Description</label>
+        <input id="name" type="text" placeholder="e.g. Groceries" required>
+
+        <label for="amount">Amount (₹)</label>
+        <input id="amount" type="number" min="0.01" step="0.01" placeholder="Enter amount" required>
+
+        <label for="type">Transaction type</label>
+        <select id="type">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+
+        <button type="submit">Add Transaction</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Transaction History</h2>
+      <ul id="transactions">
+        <li>No transactions yet.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 PaisaPilot | Manage your money wisely.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
